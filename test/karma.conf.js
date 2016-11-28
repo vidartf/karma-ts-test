@@ -10,7 +10,7 @@ module.exports = function(config) {
     ],
     colors: true,
     singleRun: true,
-    logLevel: config.LOG_DEBUG,
+    logLevel: config.LOG_INFO,
 
     preprocessors: {
       "**/*.ts": ["karma-typescript"]
@@ -21,7 +21,7 @@ module.exports = function(config) {
     browsers: ["Chrome"],
 
     karmaTypescriptConfig: {
-      tsconfig: "./tsconfig.json"
+      tsconfig: "test/src/tsconfig.json"
     }
   });
 };
