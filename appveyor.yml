@@ -6,15 +6,26 @@ clone_depth: 5                      # clone entire repository history if not def
 cache:
   - node_modules                    # local npm modules
 
+# Test against this version of Node.js
+environment:
+  - nodejs_version: "6.1"
+  - nodejs_version: "6.0"
+
 
 # scripts that run after cloning repository
 install:
+  # Get the latest stable version of Node.js or io.js
+  - ps: Install-Product node $env:nodejs_version
   # by default, all script lines are interpreted as batch
-  - cmd: npm install
+  - npm install
+
+# Don't actually build.
+build: off
 
 # to run your custom scripts instead of automatic tests
 test_script:
-  - cmd: npm test
-
-
-
+  # Output useful info for debugging.
+  - node --version
+  - npm --version
+  # run tests
+  - npm test
