@@ -13,9 +13,9 @@ describe('', () => {
     expect(ok).to.be(42);
   });
 
-  it('should fail', () => {
+  it('should not fail after all', () => {
     let ok = willFail();
-    expect(ok).to.be(42);
+    expect(ok).to.be(13);
   });
 
 });
