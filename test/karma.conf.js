@@ -10,7 +10,7 @@ module.exports = function(config) {
     ],
     colors: true,
     singleRun: true,
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG,
 
     preprocessors: {
       "**/*.ts": ["karma-typescript"]
