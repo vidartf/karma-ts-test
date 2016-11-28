@@ -1,0 +1,20 @@
+
+# set clone depth
+clone_depth: 5                      # clone entire repository history if not defined
+
+# build cache to preserve files/folders between builds
+cache:
+  - node_modules                    # local npm modules
+
+
+# scripts that run after cloning repository
+install:
+  # by default, all script lines are interpreted as batch
+  - cmd: npm install
+
+# to run your custom scripts instead of automatic tests
+test_script:
+  - cmd: npm test
+
+
+
