@@ -1,5 +1,5 @@
 module.exports = function(config) {
-  config.set({
+  var configuration = {
     basePath: '..',
     frameworks: ["mocha", "karma-typescript"],
 
@@ -23,8 +23,9 @@ module.exports = function(config) {
     karmaTypescriptConfig: {
       tsconfig: "test/src/tsconfig.json"
     }
-  });
+  }
+  if (process.env.TRAVIS) {
+      configuration.browsers = ['Firefox'];
+  }
+  config.set(configuration);
 };
-if (process.env.TRAVIS) {
-    configuration.browsers = ['Firefox'];
-}
