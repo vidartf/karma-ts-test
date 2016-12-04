@@ -18,6 +18,9 @@ install:
   # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node $env:nodejs_version
   # by default, all script lines are interpreted as batch
+  - cd other_package
+  - npm install && npm run build
+  - cd ..
   - npm install
 
 # Don't actually build.
