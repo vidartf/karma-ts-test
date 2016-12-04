@@ -10,6 +10,9 @@ module.exports = function(config) {
       { pattern: "test/files/**/*.json" },
       { pattern: "test/files/**/*.nosj" }
     ],
+    exclude: [
+      "src/typings.d.ts"
+    ],
     colors: true,
     singleRun: true,
     logLevel: config.LOG_DEBUG,

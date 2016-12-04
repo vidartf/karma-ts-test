@@ -2,12 +2,15 @@
   "name": "karma-ts-test",
   "version": "1.0.0",
   "description": "Test",
-  "main": "index.js",
+  "directories": {
+    "lib": "lib/"
+  },
   "scripts": {
     "clean": "rimraf node_modules",
     "build": "npm run build:src",
     "build:src": "tsc --project src",
     "build:test": "tsc --project test/src",
+    "update-other": "rimraf ./node_modules/test-codemirror && npm install",
     "test": "karma start test/karma.conf.js",
     "test:chrome": "karma start --browsers=Chrome test/karma.conf.js",
     "test:firefox": "karma start --browsers=Firefox test/karma.conf.js",
@@ -15,6 +18,10 @@
   },
   "author": "",
   "license": "BSD-3-Clause",
+  "dependencies": {
+    "test-codemirror": "./other_package",
+    "codemirror": "^5.21.0"
+  },
   "devDependencies": {
     "@types/expect.js": "^0.3.29",
     "@types/mocha": "^2.2.33",
