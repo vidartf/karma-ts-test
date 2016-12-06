@@ -10,5 +10,8 @@
     "noEmitOnError": true,
     "strictNullChecks": true,
     "skipLibCheck": true
-  }
+  },
+  "include": [
+    "./typings.d.ts"
+  ]
 }
