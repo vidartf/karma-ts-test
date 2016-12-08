@@ -7,7 +7,8 @@ module.exports = function(config) {
       { pattern: "node_modules/expect.js/index.js" },
       { pattern: "test/src/**/*.ts" },
       { pattern: "src/**/*.ts" },
-      { pattern: "test/files/**/*.json" }
+      { pattern: "test/files/**/*.json" },
+      { pattern: "test/files/**/*.nosj" }
     ],
     colors: true,
     singleRun: true,
@@ -15,7 +16,8 @@ module.exports = function(config) {
 
     preprocessors: {
       "**/*.ts": ["karma-typescript"],
-      "**/*.json": ["karma-typescript-json"]
+      "**/*.json": ["karma-typescript-json"],
+      "**/*.nosj": ["karma-typescript-json"]
     },
 
     reporters: ["progress", "karma-typescript"],
