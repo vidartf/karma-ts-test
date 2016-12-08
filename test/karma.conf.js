@@ -6,14 +6,16 @@ module.exports = function(config) {
     files: [
       { pattern: "node_modules/expect.js/index.js" },
       { pattern: "test/src/**/*.ts" },
-      { pattern: "src/**/*.ts" }
+      { pattern: "src/**/*.ts" },
+      { pattern: "test/files/**/*.json" }
     ],
     colors: true,
     singleRun: true,
     logLevel: config.LOG_DEBUG,
 
     preprocessors: {
-      "**/*.ts": ["karma-typescript"]
+      "**/*.ts": ["karma-typescript"],
+      "**/*.json": ["karma-typescript-json"]
     },
 
     reporters: ["progress", "karma-typescript"],
