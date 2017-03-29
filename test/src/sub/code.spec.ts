@@ -7,7 +7,7 @@ import {
 } from '../../../src/sub/code';
 
 const mydata = require('../../files/data.json') as (string | number)[];
-const mydata2 = require('../../files/otherext.nosj') as (string | number)[];
+//const mydata2 = require('../../files/otherext.nosj') as (string | number)[];
 
 describe('', () => {
 
@@ -27,11 +27,11 @@ describe('', () => {
     ])
   });
 
-  it('should get JSON data correctly, even with different extension', () => {
+  /*it('should get JSON data correctly, even with different extension', () => {
     expect(mydata2).to.eql([
       1, 2, 3, "a", "b", "c"
     ])
-  });
+  });*/
 
 
 });

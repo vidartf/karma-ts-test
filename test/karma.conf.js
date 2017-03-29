@@ -15,9 +15,7 @@ module.exports = function(config) {
     logLevel: config.LOG_DEBUG,
 
     preprocessors: {
-      "**/*.ts": ["karma-typescript"],
-      "**/*.json": ["karma-typescript-json"],
-      "**/*.nosj": ["karma-typescript-json"]
+      "**/*.ts": ["karma-typescript"]
     },
 
     reporters: ["progress", "karma-typescript"],
