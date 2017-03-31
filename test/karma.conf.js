@@ -4,11 +4,9 @@ module.exports = function(config) {
     frameworks: ["mocha", "karma-typescript"],
 
     files: [
-      { pattern: "node_modules/expect.js/index.js" },
       { pattern: "test/src/**/*.ts" },
       { pattern: "src/**/*.ts" },
-      { pattern: "test/files/**/*.json" },
-      { pattern: "test/files/**/*.nosj" }
+      { pattern: "test/files/**/*.json" }
     ],
     colors: true,
     singleRun: true,
